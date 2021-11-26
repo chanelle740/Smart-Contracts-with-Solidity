@@ -806,12 +806,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xE3E56bCeEA38062f76da18e1895036843033B24E",
-      "transactionHash": "0xf59346bfc47eb7e5130354d68823b922242472f1cfb2048dccca7a5a322c641c"
+      "address": "0x7B7a2632F0CcB2a679754EC9a1960AE019190eD8",
+      "transactionHash": "0x0604fd321b2e206aa38ce6886727075c5c506704a7e9231c498f6cf5d957266d"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-26T09:06:39.632Z",
+  "updatedAt": "2021-11-26T09:10:25.195Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
