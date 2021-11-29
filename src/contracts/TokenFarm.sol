@@ -16,4 +16,15 @@ contract TokenFarm{
         
     }
 
+    //1. Stakes Tokens(Deposit)
+
+    function stakeTokens(uint _amount) public{
+        daiToken.transferFrom(msg.sender, address(this), _amount  )
+
+    }
+
+    //2. Unstaking Tokens(Withdraw)
+
+    //3. Issuing Tokens
+
 }
