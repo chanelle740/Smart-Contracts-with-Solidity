@@ -65,7 +65,11 @@ contract('TokenFarm', ([owner, investor]) =>{
            //check investor balance before stacking
            result = await daiToken.balanceOf(investor)
            assert.equal(result.toString(), tokens('100'), 'investor Mock DAU=I wallet balance correct before stacking')
-       }) 
+       
+
+            
+            
+        }) 
     })
 
 })
