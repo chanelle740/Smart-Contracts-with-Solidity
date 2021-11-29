@@ -1,3 +1,4 @@
+const { assertTryStatement } = require('@babel/types');
 const { assert } = require('chai');
 
 const DaiToken = artifacts.require('DaiToken');
@@ -57,5 +58,14 @@ contract('TokenFarm', ([owner, investor]) =>{
         })
     })
 
+    describe('Farming tokens', async() =>{
+       it('rewards investors for staking mDai tokens', async()=>{
+           let result;
+
+           //check investor balance before stacking
+           result = await daiToken.balanceOf(investor)
+           assert.equal(result.toString(), tokens('100'), 'investor Mock DAU=I wallet balance correct before stacking')
+       }) 
+    })
 
 })
