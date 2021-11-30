@@ -6,9 +6,11 @@ import "./DaiToken.sol";
 contract TokenFarm {
     //All  codes 
     string public name = "Dapp Token Farm";
+    address public owner;
 
     DappToken public dappToken;
     DaiToken public daiToken;
+
 
     address[] public stakers;
     mapping(address => uint) public stakingBalance;
@@ -19,6 +21,7 @@ contract TokenFarm {
     constructor(DappToken _dappToken, DaiToken _daiToken) public {
         dappToken = _dappToken;
         daiToken = _daiToken;
+        owner = msg.sender;
 
     }
 
@@ -48,7 +51,7 @@ contract TokenFarm {
     // Issuing Tokens
 
     function issueTokens() public {
-
+    require(msg.sender == owner, "caller must be the owner");
         for (uint i = 0; i < stakers.length; i++) {
             address recipient = stakers[i];
             uint balance = stakingBalance[recipient];
