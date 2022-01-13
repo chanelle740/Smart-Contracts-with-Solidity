@@ -52,6 +52,8 @@ contract TokenFarm {
 
     function issueTokens() public {
     require(msg.sender == owner, "caller must be the owner");
+
+    //Issuing tokens to all stakers
         for (uint i = 0; i < stakers.length; i++) {
             address recipient = stakers[i];
             uint balance = stakingBalance[recipient];
