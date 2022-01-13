@@ -75,8 +75,11 @@ contract TokenFarm {
 
         daiToken.transfer(msg.sender, balance);
 
-        isStaking[msg.sender] = false;
+        stakingBalance[msg.sender] = 0;
 
+        isStacking[msg.sender] = false;
+
+        
     }
 
 
